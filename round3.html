@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Round 3</title>
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z'%3E%3C/path%3E%3C/svg%3E" type="image/svg+xml">
+    <link rel="stylesheet" type="text/css" href="round2.css">
+	<link rel="stylesheet" type="text/css" href="button.css">
+</head>
+<body style="background-image: url('round3.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+    <header>
+        <h1>Round 3</h1>
+        <h1>Capturing the Ghost</h1>
+    </header>
+    <main>
+        <section id="section1">
+            
+                <div class="scroll-box">
+                    
+                    <!-- Your content goes here -->
+                    <p>The ominous haunted house loomed before you, a place that no one in the town had ever dared to visit. A shiver ran down your spine as you stood at the front gate, confronted by the chilling silence and eerie aura that surrounded the garden.
+
+With trepidation, you extended a trembling hand to the gate and slowly began to open it. The rusty hinges creaked loudly, adding to the eerie ambiance that enveloped the property. The unsettling feeling in the pit of your stomach grew stronger with each passing moment.
+
+As you entered the garden, a sense of foreboding washed over you, and you could sense the presence of something inexplicable and creepy lurking in the shadows. The overgrown vegetation and dilapidated structures only added to the unsettling atmosphere.
+
+Inside the eerie silence, your heart skipped a beat as you heard a sudden, piercing scream. It was the unmistakable voice of the missing girl, echoing from one of the windows on the top floor of the haunted house. The urgency of the situation propelled you forward, your determination outweighing your fear.
+
+You wasted no time and began to ascend the shadowy stairs, one step at a time, the haunting scream of the girl guiding you towards the source of her distress. With each step, the air grew heavier with anticipation, and you knew that the answers to the mystery and the safety of the child were hidden within the eerie confines of the house.
+
+As the child recounted her harrowing story, a chill ran down your spine. The parents had indeed performed a ritual in desperation during a severe financial crisis, initially considering sacrificing their newborn daughter. However, something had caused them to change their minds halfway through the ritual, and they ceased the dark practice. Little did they know that by initiating the ritual, they had invoked a curse that would manifest when their child turned six.
+
+Over the years, the family's life had been plagued by abnormal and eerie occurrences, reaching a climax one fateful day. Fearing for their child's safety and desperate to save her from the curse they had unwittingly brought upon her, the parents made the agonizing decision to sacrifice themselves. They had called you, feigning a dinner invitation, with the intention that you would search for them and ensure their child's safety.
+
+As the child's story reached its conclusion, an eerie presence began to manifest in the room. The ghostly apparition materialized before your eyes, and a wave of dread washed over you. The malevolent spirit wasted no time and launched a terrifying assault, attempting to harm you. Panic set in, but in that moment of desperation, you remembered the ancient words of protection your family had imparted to you at the edge of life itself.
+
+Summoning your courage, you began to chant the powerful incantations, invoking the mystical words of defense. The incantations created a barrier, distracting and ensnaring the vengeful spirit in a different dimension, separating it from the world of the living. This brief respite allowed you and the cursed child to escape the malevolent entity's clutches.
+
+Together, you fled to the nearest religious sanctuary, seeking refuge and safety. The story of the haunted house, the curse, and the terrifying encounter with the vengeful spirit had come to an end. In the sacred surroundings of the religious place, you found sanctuary and protection, bringing an unsettling and otherworldly tale to its conclusion.
+
+
+</p>
+                    </div>
+                <div class="button-container">
+  <button class="button-27" role="button" button id = "drive1">Source Code</button>
+  <div class="text-box">
+  <div class="flexbox">
+    <input type="text" placeholder="Enter your answer here..." id="answerBox1"><span class="hidden_text">Winchester</span>
+	</div>
+    <button class="button-12" role="button" onclick="checkAnswer1('answerBox1')">SUBMIT</button>
+	
+  </div>
+</div>
+
+<div class="button-container center">
+  <button class="button-27" role="button" button id = "myButto1">Source Code</button>
+  <div class="text-box">
+  <div class="flexbox">
+    <input type="text" placeholder="Enter your answer here..." id="answerBox2"><span class="hidden_text">Nun</span>
+	</div>
+    <button class="button-12" role="button" onclick="checkAnswer2('answerBox2')">SUBMIT</button>
+	
+  </div>
+</div>
+
+<div class="button-container">
+  <button class="button-27" role="button" button id = "myButto2">Source Code</button>
+  <div class="text-box">
+  <div class="flexbox">
+    <input type="text" placeholder="Enter your answer here..." id="answerBox3">
+	<span class="hidden_text">Ephemera</span>
+	</div>
+    <button class="button-12" role="button" onclick="checkAnswer3('answerBox3')">SUBMIT</button>
+  </div>
+</div>
+<button onclick="redirectToPage()">GIVE UP</button>
+    <div class="timer-container">
+        <div id="timer" class="countdown-timer">00:00</div>
+    </div>
+
+    <script src="timer1.js"></script>
+
+            
+        </section>
+    </main>
+
+        <script>
+function checkAnswer1(answerBox1) {
+    const answerBox = document.getElementById(answerBox1);
+    const hiddenText = answerBox.parentElement.querySelector(".hidden_text");
+    const inputAnswer = parseInt(answerBox.value); // Parse the input as an integer
+
+    // Check if the input matches the answer
+    const correctAnswer = 785;
+    if (inputAnswer === correctAnswer) {
+        hiddenText.style.display = "inline";
+    } else {
+        hiddenText.style.display = "none";
+    }
+}
+
+function checkAnswer2(answerBox2) {
+    const answerBox = document.getElementById(answerBox2);
+    const hiddenText = answerBox.parentElement.querySelector(".hidden_text");
+    const inputAnswer = parseInt(answerBox.value); // Parse the input as an integer
+
+    // Check if the input matches the answer
+    const correctAnswer = 415;
+    if (inputAnswer === correctAnswer) {
+        hiddenText.style.display = "inline";
+    } else {
+        hiddenText.style.display = "none";
+    }
+}
+
+function checkAnswer3(answerBox3) {
+    const answerBox = document.getElementById(answerBox3);
+    const hiddenText = answerBox.parentElement.querySelector(".hidden_text");
+    const inputAnswer = parseInt(answerBox.value); // Parse the input as an integer
+
+    // Check if the input matches the answer
+    const correctAnswer = 4;
+    if (inputAnswer === correctAnswer) {
+        hiddenText.style.display = "inline";
+    } else {
+        hiddenText.style.display = "none";
+    }
+}
+function redirectToPage() {
+            // Display an alert when the button is pressed
+            alert('You have quit this round !');
+
+            // Redirect to another HTML page
+            window.location.href = 'home2.html'; }
+		const myButton1 = document.getElementById('drive1');
+
+        // Define the URL you want to open in a new tab
+        const linkURL1 = 'https://drive.google.com/file/d/1htJHucgFuyx9yKZmc-VW4v4N49nKbNkk/view?usp=sharing'; // Replace with your desired URL
+
+        // Add a click event listener to the button
+        myButton1.addEventListener('click', function () {
+            // Open the URL in a new tab or window
+            window.open(linkURL1, '_blank');
+        });
+		const myButton3 = document.getElementById('myButto1');
+
+        // Define the URL you want to open in a new tab
+        const linkURL2 = 'https://drive.google.com/file/d/1ToSGjYxfjn7fVmQPV3InrqHBU-uQ_ehH/view?usp=sharing'; // Replace with your desired URL
+
+        // Add a click event listener to the button
+        myButton3.addEventListener('click', function () {
+            // Open the URL in a new tab or window
+            window.open(linkURL2, '_blank');
+        });
+		const myButton6 = document.getElementById('myButto2');
+
+        // Define the URL you want to open in a new tab
+        const linkURL4 = 'https://drive.google.com/file/d/1XdC2_fIFhu_YYyb0ffpLi1n6WJVQa5Cg/view?usp=sharing'; // Replace with your desired URL
+
+        // Add a click event listener to the button
+        myButton6.addEventListener('click', function () {
+            // Open the URL in a new tab or window
+            window.open(linkURL4, '_blank');
+        });
+        </script>
+
+    
+</body>
+</html>
